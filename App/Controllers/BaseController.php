@@ -2,6 +2,8 @@
     // Base application controller
     namespace App\Controllers;
     
+    use App\Models\PageModel as Model;
+    
     class BaseController
     {
         /**
@@ -39,7 +41,7 @@
         *   Install method of Base Controller
         *   @return mixed
         */
-        function indexInstall()
+        function indexInstall($action)
         {
             global $APP; // Globaly $APP var
             
@@ -56,7 +58,7 @@
                     'About' => '/about/'
                 ),
                 'contentLnk' => '/pages-list/',
-                'installLnk' => '/install/?action=setup'
+                'installLnk' => '/install/actionSetUp/'
             );
             
             // Render page template

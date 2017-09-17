@@ -20,8 +20,14 @@
         'methods' => 'GET'
     )));
     
-    // Page detail
-    $collection->attachRoute(new Route('/page-detail/', array(
+    // Page detail WITH action param
+    $collection->attachRoute(new Route('/page-detail/:id/', array(
+        '_controller' => 'App\Controllers\PageController::pagesDetail',
+        'methods' => 'GET'
+    )));
+    
+    // Page detail WITH ID
+    $collection->attachRoute(new Route('/page-detail/:id/:action', array(
         '_controller' => 'App\Controllers\PageController::pagesDetail',
         'methods' => 'GET'
     )));
@@ -29,6 +35,12 @@
     // Base index action
     $collection->attachRoute(new Route('/', array(
         '_controller' => 'App\Controllers\BaseController::indexAction',
+        'methods' => 'GET'
+    )));
+    
+    // Base install action with setup
+    $collection->attachRoute(new Route('/install/:action/', array(
+        '_controller' => 'App\Controllers\BaseController::indexInstall',
         'methods' => 'GET'
     )));
     
@@ -47,5 +59,4 @@
     // Exec router collection
     $router = new Router($collection);
     $router->setBasePath('/');
-    $APP['router'] = $router->matchCurrentRequest();
-    $APP['route'] = new Route;
+    $router->matchCurrentRequest();
