@@ -10,16 +10,16 @@
         */
         function databaseCreate($name)
         {
-            
+            if (!isset($name)) return false;
         }
         
         /**
         *   Create pet__page teable method
         *   @return bool
         */
-        function tableCreate()
+        function tableCreate($name)
         {
-            
+            if (!isset($name)) return false;
         }
         
         /**
@@ -56,15 +56,6 @@
         function updatePage($id)
         {
             
-        }
-        
-        /**
-        *   Check database and table for worck
-        *   @return bool
-        */
-        function checkInstall()
-        {
-            return true;
         }
     }
 

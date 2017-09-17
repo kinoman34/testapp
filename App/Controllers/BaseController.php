@@ -45,6 +45,13 @@
         {
             global $APP; // Globaly $APP var
             
+            if (
+                $action == 'actionSetUp' &&
+                Model::databaseCreate($APP['config']->getDBparams()['DB_NAME']) &&
+                Model::tableCreate('pet__page')
+            )
+                header('Location: /install/');
+            
             // Set default page variables
             $APP['pageVariables'] = array(
                 'isInstalled' => $APP['config']->isInstalled(),

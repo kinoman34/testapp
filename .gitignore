@@ -1,5 +1,6 @@
 vendor
 composer.phar
+adminer.php
 
 ; App folders
 App/Config.php
