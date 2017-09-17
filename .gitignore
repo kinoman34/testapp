@@ -3,3 +3,4 @@ composer.phar
 
 ; App folders
 App/Config.php
+App/Views/compilation_cache

@@ -811,12 +811,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "ed85f121340bfeb8378cf736a1332a505f8382f1"
+                "reference": "d0fc29c14e486837da0f0734c3388a5761dd8ae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ed85f121340bfeb8378cf736a1332a505f8382f1",
-                "reference": "ed85f121340bfeb8378cf736a1332a505f8382f1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d0fc29c14e486837da0f0734c3388a5761dd8ae4",
+                "reference": "d0fc29c14e486837da0f0734c3388a5761dd8ae4",
                 "shasum": ""
             },
             "require": {
@@ -872,7 +872,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-11T21:23:16+00:00"
+            "time": "2017-09-15T10:12:22+00:00"
         },
         {
             "name": "symfony/debug",
@@ -880,12 +880,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "14076792065c98c32c234fbb94da9a478b394281"
+                "reference": "24964d26e28a77b027c38f4d8208ef714221718a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/14076792065c98c32c234fbb94da9a478b394281",
-                "reference": "14076792065c98c32c234fbb94da9a478b394281",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/24964d26e28a77b027c38f4d8208ef714221718a",
+                "reference": "24964d26e28a77b027c38f4d8208ef714221718a",
                 "shasum": ""
             },
             "require": {
@@ -928,7 +928,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-12T08:02:51+00:00"
+            "time": "2017-09-15T10:58:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

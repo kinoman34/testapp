@@ -3,7 +3,7 @@
     require_once dirname(__FILE__) . '/vendor/autoload.php';
     
     // Use Config App class
-    $appConfig = new App\Config;
+    $GLOBALS['appConfig'] = new App\Config;
     
     // Use Php-Router class for handling request's
     use PHPRouter\RouteCollection;
@@ -28,6 +28,12 @@
     // Base index action
     $collection->attachRoute(new Route('/', array(
         '_controller' => 'App\Controllers\BaseController::indexAction',
+        'methods' => 'GET'
+    )));
+    
+    // Base index action
+    $collection->attachRoute(new Route('/install/', array(
+        '_controller' => 'App\Controllers\BaseController::indexInstall',
         'methods' => 'GET'
     )));
     

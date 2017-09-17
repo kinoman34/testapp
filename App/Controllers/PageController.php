@@ -2,8 +2,6 @@
     // Page application controller
     namespace App\Controllers;
     
-    use App as GlobalApp;
-    
     class PageController
     {
         function pagesList()
