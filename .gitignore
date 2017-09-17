@@ -1,2 +1,5 @@
 vendor
 composer.phar
+
+; App folders
+App/Config.php
