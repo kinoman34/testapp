@@ -9,7 +9,10 @@ var App = {
         if ($('#pagesList').length > 0)
             this.pagesTable = 
                 $('#pagesList').DataTable({
-                    stateSave: true
+                    searching : false,
+                    stateSave: true,
+                    scrollY : '200px',
+                    scrollCollapse : true
                 });
     },
     

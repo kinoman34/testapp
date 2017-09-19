@@ -7,7 +7,7 @@
     $APP->Config = new App\Config;
     
     // Use Models section
-    $APP->Models->Pagemodel = new App\Models\PageModel;
+    $APP->Models->PageModel = new App\Models\PageModel;
     
     // Use Php-Router class for handling request's
     use PHPRouter\RouteCollection;
@@ -23,14 +23,20 @@
         'methods' => 'GET'
     )));
     
+    // Page detail WITH ID
+    $collection->attachRoute(new Route('/page-detail/:id/:action', array(
+        '_controller' => 'App\Controllers\PageController::pagesDetail',
+        'methods' => 'GET'
+    )));
+    
     // Page detail WITH action param
     $collection->attachRoute(new Route('/page-detail/:id/', array(
         '_controller' => 'App\Controllers\PageController::pagesDetail',
         'methods' => 'GET'
     )));
     
-    // Page detail WITH ID
-    $collection->attachRoute(new Route('/page-detail/:id/:action', array(
+    // Page detail
+    $collection->attachRoute(new Route('/page-detail/', array(
         '_controller' => 'App\Controllers\PageController::pagesDetail',
         'methods' => 'GET'
     )));

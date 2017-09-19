@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "800d4f5a918e0b2ab79223c06b88e5c8",
+    "content-hash": "f3cc6f141a2c9bef63312a13328cad36",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -709,6 +709,62 @@
             "time": "2017-09-15T10:12:22+00:00"
         },
         {
+            "name": "twig/extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig-extensions.git",
+                "reference": "2c2a90088f34be0b35c5c80ea55704a602c4fdb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/2c2a90088f34be0b35c5c80ea55704a602c4fdb4",
+                "reference": "2c2a90088f34be0b35c5c80ea55704a602c4fdb4",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.27|~2.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~3.3@dev",
+                "symfony/translation": "~2.3|~3.0"
+            },
+            "suggest": {
+                "symfony/translation": "Allow the time_diff output to be translated"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_Extensions_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\Extensions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Common additional features for Twig that do not directly belong in core",
+            "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
+            "keywords": [
+                "i18n",
+                "text"
+            ],
+            "time": "2017-06-09T13:53:09+00:00"
+        },
+        {
             "name": "twig/twig",
             "version": "1.x-dev",
             "source": {
@@ -779,7 +835,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "dannyvankooten/php-router": 20,
-        "twig/twig": 20
+        "twig/twig": 20,
+        "twig/extensions": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

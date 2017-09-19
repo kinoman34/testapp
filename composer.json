@@ -8,6 +8,7 @@
     "require": {
         "dannyvankooten/php-router": "dev-master",
         "illuminate/database": "5.1.8",
-        "twig/twig": "1.x-dev"
+        "twig/twig": "1.x-dev",
+        "twig/extensions": "^1.5@dev"
     }
 }

@@ -3,5 +3,5 @@ composer.phar
 adminer.php
 
 ; App folders
-App/Config.php
+; App/Config.php
 App/Views/compilation_cache

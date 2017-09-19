@@ -43,8 +43,13 @@
         {
             global $APP; // Globaly $APP var
             
-            if ($action == 'actionSetUp' && $APP->Models->Pagemodel->installDB())
-                    header('Location: /install/');
+            // If action=actionSetUp
+            if ($action == 'actionSetUp')
+            {
+                // If not istalled
+                !$APP->Config->isInstalled() ? $APP->Models->PageModel->installDB() : '';
+                header('Location: /install/');
+            }
             
             // Set default page variables
             $APP->pageVariables = array(

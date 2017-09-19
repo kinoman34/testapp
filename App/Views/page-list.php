@@ -21,16 +21,20 @@
                 <th>Delete</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td><a href="/page-detail/ID/"><span class="glyphicon glyphicon-play-circle"></span> #1</a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td><a href="/page-detail/ID/pageEdit/" class="glyphicon glyphicon-edit"></a></td>
-                <td><a href="/page-detail/ID/pageDelete/" class="glyphicon glyphicon-remove"></a></td>
-            </tr>
-        </tbody>
+        {% if tableRows %}
+            <tbody>
+                {% for row in tableRows %}
+                    <tr>
+                        <td><a href="/page-detail/{{row.pageid}}/"><span class="glyphicon glyphicon-play-circle"></span> #{{row.pageid}}</a></td>
+                        <td>{{row.title}}</td>
+                        <td>{{row.body|truncate(30)|raw}}</td>
+                        <td>{{row.keywords}}</td>
+                        <td>{{row.modified}}</td>
+                        <td><a href="/page-detail/{{row.pageid}}/pageEdit/" class="glyphicon glyphicon-edit"></a></td>
+                        <td><a href="/page-detail/{{row.pageid}}/pageDelete/" class="glyphicon glyphicon-remove"></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        {% endif %}
     </table>
 </div>
