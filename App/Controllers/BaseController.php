@@ -2,8 +2,6 @@
     // Base application controller
     namespace App\Controllers;
     
-    use App\Models\PageModel as Model;
-    
     class BaseController
     {
         /**
@@ -15,8 +13,8 @@
             global $APP; // Globaly $APP var
             
             // Set default page variables
-            $APP['pageVariables'] = array(
-                'isInstalled' => $APP['config']->isInstalled(),
+            $APP->pageVariables = array(
+                'isInstalled' => $APP->Config->isInstalled(),
                 'pageTitle' => 'TestApp - Home page',
                 'pageHeader' => 'TestApp - Home Page',
                 'pageKeywords' => 'home, basecontroller, getstarted',
@@ -31,10 +29,10 @@
             );
             
             // Render page template
-            echo $APP['config']->getTWIG()->render('header.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('top-menu.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('home-page.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('footer.php', $APP['pageVariables']);
+            echo $APP->Config->getTWIG()->render('header.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('top-menu.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('home-page.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('footer.php', $APP->pageVariables);
         }
         
         /**
@@ -45,16 +43,12 @@
         {
             global $APP; // Globaly $APP var
             
-            if (
-                $action == 'actionSetUp' &&
-                Model::databaseCreate($APP['config']->getDBparams()['DB_NAME']) &&
-                Model::tableCreate('pet__page')
-            )
-                header('Location: /install/');
+            if ($action == 'actionSetUp' && $APP->Models->Pagemodel->installDB())
+                    header('Location: /install/');
             
             // Set default page variables
-            $APP['pageVariables'] = array(
-                'isInstalled' => $APP['config']->isInstalled(),
+            $APP->pageVariables = array(
+                'isInstalled' => $APP->Config->isInstalled(),
                 'pageTitle' => 'TestApp - Install page',
                 'pageHeader' => 'TestApp - Install Page',
                 'pageKeywords' => 'home, basecontroller, getstarted, install test app',
@@ -69,10 +63,10 @@
             );
             
             // Render page template
-            echo $APP['config']->getTWIG()->render('header.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('top-menu.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('install-page.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('footer.php', $APP['pageVariables']);
+            echo $APP->Config->getTWIG()->render('header.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('top-menu.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('install-page.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('footer.php', $APP->pageVariables);
         }
         
         /**
@@ -84,8 +78,8 @@
             global $APP; // Globaly $APP var
             
             // Set default page variables
-            $APP['pageVariables'] = array(
-                'isInstalled' => $APP['config']->isInstalled(),
+            $APP->pageVariables = array(
+                'isInstalled' => $APP->Config->isInstalled(),
                 'pageTitle' => 'TestApp - About page',
                 'pageHeader' => 'TestApp - About Page',
                 'pageKeywords' => 'home, basecontroller, getstarted, about page',
@@ -98,10 +92,10 @@
             );
             
             // Render page template
-            echo $APP['config']->getTWIG()->render('header.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('top-menu.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('about.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('footer.php', $APP['pageVariables']);
+            echo $APP->Config->getTWIG()->render('header.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('top-menu.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('about.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('footer.php', $APP->pageVariables);
         }
     }
     

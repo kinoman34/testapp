@@ -5,6 +5,6 @@
     <p class="lead">Therefore, I connected several libraries with the help of a <b>Composer</b> and quickly and simply implemented this application</p>
     <p class="lead"><b>PHPRouter</b> - <a href="https://github.com/dannyvankooten/PHP-Router">https://github.com/dannyvankooten/PHP-Router</a></p>
     <p class="lead"><b>TWIG</b> - <a href="https://github.com/twigphp/Twig">https://github.com/twigphp/Twig</a></p>
-    <p class="lead"><b>Doctrine ORM</b> - <a href="https://github.com/doctrine/doctrine2">https://github.com/doctrine/doctrine2</a></p>
+    <p class="lead"><b>Illuminate Database</b> - <a href="https://github.com/illuminate/database">https://github.com/illuminate/database</a></p>
     <p class="lead"><b>Thanks for watch my code!</b></p>
 </div>

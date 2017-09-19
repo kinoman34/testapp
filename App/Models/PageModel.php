@@ -2,24 +2,19 @@
     // Page application model
     namespace App\Models;
     
-    class PageModel
+    use \Illuminate\Database\Eloquent\Model;
+    
+    class PageModel extends Model
     {
-        /**
-        *   Database create model method
-        *   @return bool
-        */
-        function databaseCreate($name)
-        {
-            if (!isset($name)) return false;
-        }
+        protected $table = 'pet__pages';
         
         /**
-        *   Create pet__page teable method
+        *   Database & table create model method
         *   @return bool
         */
-        function tableCreate($name)
+        function installDB()
         {
-            if (!isset($name)) return false;
+            
         }
         
         /**

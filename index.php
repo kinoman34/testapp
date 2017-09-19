@@ -1,10 +1,13 @@
 <?
     // Require autoload.php section
     require_once dirname(__FILE__) . '/vendor/autoload.php';
+    global $APP; // Application Global Object
     
-    // Use Config App class
-    global $APP;
-    $APP['config'] = new App\Config;
+    // Use Config App section
+    $APP->Config = new App\Config;
+    
+    // Use Models section
+    $APP->Models->Pagemodel = new App\Models\PageModel;
     
     // Use Php-Router class for handling request's
     use PHPRouter\RouteCollection;

@@ -2,8 +2,6 @@
     // Page application controller
     namespace App\Controllers;
     
-    use App\Models\PageModel as Model;
-    
     class PageController
     {
         /**
@@ -15,7 +13,7 @@
             global $APP; // Globaly $APP var
             
             // Set default page variables
-            $APP['pageVariables'] = array(
+            $APP->pageVariables = array(
                 'pageTitle' => 'TestApp - List of database pages',
                 'pageHeader' => 'This is list of pages',
                 'pageKeywords' => 'home, pagescontroller, list of pages',
@@ -30,12 +28,12 @@
             );
             
             // Render page template
-            echo $APP['config']->getTWIG()->render('header.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('top-menu.php', $APP['pageVariables'])
-            . (!$APP['config']->isInstalled() ? 
-                $APP['config']->getTWIG()->render('install-page.php', $APP['pageVariables']) : 
-                $APP['config']->getTWIG()->render('page-list.php', $APP['pageVariables']))
-            . $APP['config']->getTWIG()->render('footer.php', $APP['pageVariables']);
+            echo $APP->Config->getTWIG()->render('header.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('top-menu.php', $APP->pageVariables)
+            . (!$APP->Config->isInstalled() ? 
+                $APP->Config->getTWIG()->render('install-page.php', $APP->pageVariables) : 
+                $APP->Config->getTWIG()->render('page-list.php', $APP->pageVariables))
+            . $APP->Config->getTWIG()->render('footer.php', $APP->pageVariables);
         }
         
         /**
@@ -47,8 +45,8 @@
             global $APP; // Globaly $APP var
             
             // Set default page variables
-            $APP['pageVariables'] = array(
-                'isInstalled' => $APP['config']->isInstalled(),
+            $APP->pageVariables = array(
+                'isInstalled' => $APP->Config->isInstalled(),
                 'pageTitle' => 'TestApp - Detail page content',
                 'pageHeader' => '',
                 'pageKeywords' => '',
@@ -63,12 +61,12 @@
             );
             
             // Render page template
-            echo $APP['config']->getTWIG()->render('header.php', $APP['pageVariables'])
-            . $APP['config']->getTWIG()->render('top-menu.php', $APP['pageVariables'])
-            . (!$APP['config']->isInstalled() ? 
-                $APP['config']->getTWIG()->render('install-page.php', $APP['pageVariables']) :
-                $APP['config']->getTWIG()->render('page-detail.php', $APP['pageVariables']))
-            . $APP['config']->getTWIG()->render('footer.php', $APP['pageVariables']);
+            echo $APP->Config->getTWIG()->render('header.php', $APP->pageVariables)
+            . $APP->Config->getTWIG()->render('top-menu.php', $APP->pageVariables)
+            . (!$APP->Config->isInstalled() ? 
+                $APP->Config->getTWIG()->render('install-page.php', $APP->pageVariables) :
+                $APP->Config->getTWIG()->render('page-detail.php', $APP->pageVariables))
+            . $APP->Config->getTWIG()->render('footer.php', $APP->pageVariables);
         }
     }
     
