@@ -27,7 +27,7 @@ private $dbParams; /* DB params */
 
 function __construct()
 {
-    // Init DB connection On Doctrine ORM
+    // Init DB connection in Illuminate Database ORM
     $this->host = 'localhost';
     $this->login = '';
     $this->password = '';
