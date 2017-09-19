@@ -29,8 +29,8 @@ function __construct()
 {
     // Init DB connection On Doctrine ORM
     $this->host = 'localhost';
-    $this->login = 'devuser';
-    $this->password = '7bn8vrt';
+    $this->login = '';
+    $this->password = '';
     $this->driver = 'mysql';
 ```
 # Если все было сделано правильно
